@@ -1,5 +1,5 @@
-# Clean Blog theme for Bludit
-A clean, Bootstrap blog theme ready to hook into your favorite CMS or blogging platform.
+# Docs X theme for Bludit
+Docs X is a theme to create documentation sites, with highligh syntax and based on Bootstrap.
 
 ## Compatible
 - Bludit v2.x
@@ -7,12 +7,8 @@ A clean, Bootstrap blog theme ready to hook into your favorite CMS or blogging p
 ## Author
 - Diego
 
-## Base on
-- StartBootStrap
-- https://startbootstrap.com/template-overviews/clean-blog/
-
 ## License
 - MIT License
 
 ## Screenshot
-![screenshot-clean-blog](https://github.com/bludit-themes/clean-blog/raw/master/screenshot.png)
+![screenshot-docs-x](https://github.com/bludit-themes/docs-x/raw/master/screenshot.png)
