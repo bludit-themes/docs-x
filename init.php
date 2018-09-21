@@ -3,8 +3,8 @@ $GITHUB_BASE_URL = '__GITHUB_BASE_URL__';
 
 $REDIRECT_PARENT_TO_FIRST_CHILD = true;
 
-if (!$Site->homepage()) {
-        echo 'This theme need a home page defined, please select one page on <b>Admin panel->Settings->Advanced->Home page</b>';
+if (!$site->homepage()) {
+        echo 'This theme need a home page, please select one page from <b>Admin panel->Settings->Advanced->Home page</b>';
         exit;
 }
 
@@ -14,7 +14,7 @@ if ($REDIRECT_PARENT_TO_FIRST_CHILD) {
 			$children = $page->children();
 			if (!empty($children[0])) {
 				$firstChild = $children[0];
-			
+
 				header('Location: '.$firstChild->permalink(), true, 302);
 				exit;
 			}

@@ -10,6 +10,11 @@ a {
 	color: #005ec3;
 }
 
+hr {
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+}
+
 /* Navbar */
 .navbar-nav-svg {
 	display: inline-block;
@@ -167,3 +172,7 @@ footer {
 	border-left: 3px solid #ddd;
 }
 /* Navbar */
+
+#page-content li {
+	padding: 6px 0;
+}
