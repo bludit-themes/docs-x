@@ -15,6 +15,12 @@ hr {
 	margin-bottom: 3rem;
 }
 
+.btn-primary {
+	background: #42a5f5;
+	border-color: #42a5f5;
+	border-radius: 2px;
+}
+
 /* Navbar */
 .navbar-nav-svg {
 	display: inline-block;
@@ -26,18 +32,20 @@ hr {
 
 /* Toc */
 #toc {
-    float: right;
-    width: 40%;
-    margin: 0 0 0.5em 0.5em;
-    padding: 1em;
-    background-color: #f5f5f5;
-    display: none;
+	float: right;
+	width: 40%;
+	margin: 0 0 0.5em 0.5em;
+	padding: 1em;
+	background-color: #f5f5f5;
+	display: none;
+	border: 1px solid #ddd;
 }
 
 #toc ul {
-	list-style-type: none;
+	list-style-type: disc;
 	padding: 0;
 	margin: 0;
+	padding-left: 15px;
 }
 
 /* Main */
@@ -59,7 +67,7 @@ hr {
 .main h2,
 .main h3,
 .main h4 {
-	margin-top: 20px;
+	margin-top: 30px;
 	margin-bottom: 15px;
 	color: #e6522c;
 }
@@ -86,6 +94,7 @@ hr {
 	padding: 20px;
 	background: #fafafa;
 	font-size: 0.9em;
+	border-left: 5px solid #ccc;
 }
 
 .main div.note div.title {
