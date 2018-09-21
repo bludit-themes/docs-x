@@ -1,4 +1,4 @@
-<nav class="sidebar">
+<nav>
 <?php
 	// Get all parent pages
 	$parents = buildParentPages();

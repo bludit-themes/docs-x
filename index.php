@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="">
 <head>
 <?php include(THEME_DIR_PHP.'head.php'); ?>
 </head>
@@ -10,36 +10,27 @@
 
 	<!-- Navbar -->
 	<div>
-	<?php include(THEME_DIR_PHP.'navbar.php'); ?>
+		<?php include(THEME_DIR_PHP.'navbar.php'); ?>
+	</div>
+
+	<!-- Sidebar -->
+	<div id="sidebar">
+		<?php include(THEME_DIR_PHP.'sidebar.php'); ?>
 	</div>
 
 	<!-- Content -->
-	<div class="container">
-		<div class="row">
-			<div class="col-md-3 side-nav-col">
-			<?php
-				include(THEME_DIR_PHP.'sidebar.php');
-			?>
-			</div>
-
-			<div class="col-md-9 doc-content">
-				<div class="main">
-				<?php
-					include(THEME_DIR_PHP.'page.php');
-				?>
-				</div>
-			</div>
-		</div>
-
-		<footer>
-			<p class="m-0 text-right text-black text-uppercase"><?php echo $site->footer(); ?><span class="ml-3 text-warning">Powered by <a target="_blank" class="text-warning" href="https://www.bludit.com">Bludit</a></span></p>
-		</footer>
+	<div class="main">
+		<?php include(THEME_DIR_PHP.'page.php'); ?>
 	</div>
+
+	<footer>
+		<p class="m-0 text-right text-black text-uppercase"><?php echo $site->footer(); ?><span class="ml-3 text-warning">Powered by <a target="_blank" class="text-warning" href="https://www.bludit.com">Bludit</a></span></p>
+	</footer>
 
 	<!-- Javascript -->
 	<?php
 		echo Theme::jquery();
-		echo Theme::js('js/bootstrap.min.js');
+		echo Theme::jsBootstrap();
 		echo Theme::js('js/highlight.min.js');
 	?>
 

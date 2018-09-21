@@ -1,5 +1,5 @@
 <h1 class="title text-uppercase"><?php echo $page->title(); ?></h1>
-<div id="toc">
+<div id="toc" class="d-none d-lg-block">
 	<ul id="toc-content"></ul>
 </div>
 <div id="page-content">
