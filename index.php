@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="<?php echo $language->currentLanguageShortVersion() ?>">
 <head>
 <?php include(THEME_DIR_PHP.'head.php'); ?>
 </head>
