@@ -57,6 +57,28 @@
 		});
 	</script>
 
+	<!-- Copy to clipboard -->
+	<script>
+		function copyToClipboard(text) {
+			var aux = document.createElement("input");
+			aux.setAttribute("value", text);
+			document.body.appendChild(aux);
+			aux.select();
+			document.execCommand("copy");
+			document.body.removeChild(aux);
+		}
+
+		$(document).ready(function() {
+			$("h2").click(function() {
+				var id = $(this).attr("id");
+				var permalink = "<?php echo $page->permalink() ?>";
+				var link = permalink+"#"+id;
+				copyToClipboard(link);
+				console.log("Copied to clipboard: "+link);
+			});
+		});
+	</script>
+
 	<!-- Load Bludit Plugins: Site Body End -->
 	<?php Theme::plugins('siteBodyEnd'); ?>
 

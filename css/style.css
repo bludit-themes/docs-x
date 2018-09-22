@@ -74,6 +74,7 @@ hr {
 
 .main h2 {
 	font-size: 1.5em;
+	cursor: pointer;
 }
 
 .main h3 {
@@ -200,6 +201,11 @@ footer {
 
 #page-content li {
 	padding: 6px 0;
+}
+
+.tooltip {
+	position: fixed;
+	display: inline-block;
 }
 
 @media only screen and (max-width: 800px) {
