@@ -21,6 +21,17 @@ hr {
 	border-radius: 2px;
 }
 
+::-webkit-scrollbar {
+	-webkit-appearance: none;
+	width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 5px;
+	background-color: rgba(0,0,0,.5);
+	box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+
 /* Navbar */
 .navbar-nav-svg {
 	display: inline-block;
