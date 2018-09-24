@@ -2,7 +2,7 @@
 Docs X is a theme to create documentation sites, with highligh syntax and based on Bootstrap.
 
 ## Compatible
-- Bludit v2.x
+- Bludit v3.x
 
 ## Author
 - Diego
