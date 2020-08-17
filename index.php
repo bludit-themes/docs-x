@@ -13,7 +13,10 @@
 		<?php include(THEME_DIR_PHP.'navbar.php'); ?>
 	</div>
 
+	<div class="docs-container">
+
 	<!-- Sidebar -->
+	<div id="backdrop"></div>
 	<div id="sidebar">
 		<?php include(THEME_DIR_PHP.'sidebar.php'); ?>
 	</div>
@@ -26,6 +29,8 @@
 	<footer>
 		<p class="m-0 text-right text-black text-uppercase"><?php echo $site->footer(); ?><span class="ml-3 text-warning">Powered by <a target="_blank" class="text-warning" href="https://www.bludit.com">Bludit</a></span></p>
 	</footer>
+
+    </div>
 
 	<!-- Javascript -->
 	<?php
@@ -41,10 +46,10 @@
 
 	<!-- TOC generator -->
 	<script>
-		$(document).ready(function() {
+		$(document).ready(function () {
 			var enableToc = false;
 			if ($('#page-content > h2').length > 1) {
-				$('#page-content > h2').each(function() {
+				$('#page-content > h2').each(function () {
 					if ($(this).attr('id')) {
 						enableToc = true;
 						$('#toc-content').append('<li><a href="#' + $(this).attr('id') + '">' + $(this).text() + '</a></li>');
@@ -54,6 +59,34 @@
 			if (enableToc) {
 				$('#toc').show();
 			}
+
+			$('.b-burger-btn').on('click', function () {
+				if ($(this).hasClass('open')) {
+					$('body').removeClass('stop-scrolling');
+				} else {
+					$('body').addClass('stop-scrolling');
+				}
+				$(this).toggleClass('open');
+				$('#sidebar').toggleClass('open');
+				$('#backdrop').toggleClass('open');
+			});
+			$('#backdrop').on('click', function () {
+				$(this).toggleClass('open');
+				$('body').removeClass('stop-scrolling');
+				$('#sidebar').toggleClass('open');
+				$('.b-burger-btn').toggleClass('open');
+			});
+
+			//smooth scroll to id
+			$('a[href^="#"]').on('click', function (e) {
+				e.preventDefault();
+				var target = this.hash;
+				var $target = $(target);
+				$('html, body').stop().animate({
+					scrollTop: $target.offset().top - 60
+				}, 900
+				);
+			});
 		});
 	</script>
 
