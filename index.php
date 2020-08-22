@@ -24,13 +24,12 @@
 	<!-- Content -->
 	<div class="main">
 		<?php include(THEME_DIR_PHP.'page.php'); ?>
-	</div>
 
 	<footer>
 		<p class="m-0 text-right text-black text-uppercase"><?php echo $site->footer(); ?><span class="ml-3 text-warning">Powered by <a target="_blank" class="text-warning" href="https://www.bludit.com">Bludit</a></span></p>
 	</footer>
 
-    </div>
+    	</div>
 
 	<!-- Javascript -->
 	<?php
