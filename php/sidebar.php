@@ -1,4 +1,5 @@
 <nav>
+<?php Theme::plugins('siteSidebar') ?>
 <?php
 	// Get all parent pages
 	$parents = buildParentPages();
