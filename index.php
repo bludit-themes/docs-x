@@ -23,7 +23,20 @@
 
 	<!-- Content -->
 	<div class="main">
-		<?php include(THEME_DIR_PHP.'page.php'); ?>
+	<?php
+	// Bludit content are pages
+	// But if you order the content by date
+	// These pages works as posts
+
+	// $WHERE_AM_I variable detect where the user is browsing
+	// If the user is watching a particular page/post the variable takes the value "page"
+	// If the user is watching the frontpage the variable takes the value "home"
+	if ($WHERE_AM_I == 'page') {
+		include(THEME_DIR_PHP.'page.php');
+		} else {
+		include(THEME_DIR_PHP.'home.php');
+	}
+    	?>
 
 	<footer>
 		<p class="m-0 text-right text-black text-uppercase"><?php echo $site->footer(); ?><span class="ml-3 text-warning">Powered by <a target="_blank" class="text-warning" href="https://www.bludit.com">Bludit</a></span></p>
